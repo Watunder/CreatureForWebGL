@@ -1,0 +1,4 @@
+build_wasm
+
+Release/**
+!Release/creature.d.ts
