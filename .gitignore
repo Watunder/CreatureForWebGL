@@ -1,4 +1,7 @@
-build_wasm
+.dts/
 
-Release/**
-!Release/creature.d.ts
+build_wasm/
+
+node_modules/
+
+Release/

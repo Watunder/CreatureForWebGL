@@ -278,7 +278,7 @@ EMSCRIPTEN_BINDINGS(creaturepack_manager_module) {
         .element(&CreaturePack::PlayerBounds::y2)
         ;
 
-    emscripten::class_<CreaturePack::PackManager>("PackManager")
+    emscripten::class_<CreaturePack::PackManager>("_PackManager")
         .constructor()
         .function("addPackLoader", &CreaturePack::PackManager::addPackLoader)
         .function("addPackPlayer", &CreaturePack::PackManager::addPackPlayer)

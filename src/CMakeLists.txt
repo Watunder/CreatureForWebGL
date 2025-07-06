@@ -22,7 +22,7 @@ string(APPEND CMAKE_EXE_LINKER_FLAGS
   " -s EXIT_RUNTIME=0"
   " -s INITIAL_MEMORY=33554432"
   " -s ALLOW_MEMORY_GROWTH=1"
-  " -s EXPORT_NAME=\"'creature_native'\""
+  " -s EXPORT_NAME=\"'CreatureInit'\""
   " -s EXPORTED_FUNCTIONS=\"
   [
     '_malloc'
@@ -31,7 +31,9 @@ string(APPEND CMAKE_EXE_LINKER_FLAGS
   [
     'HEAPU8'
   ]\" "
-  " --bind"
+  " -lembind"
+  " --emit-tsd types.d.ts"
+  " --post-js creature_webgl.js"
 )
 
 # Set include directories
@@ -48,4 +50,4 @@ file(GLOB creature_src
 set(CMAKE_EXECUTABLE_SUFFIX ".js")
 
 # Add build settings
-add_executable(creature.core ${creature_src})
+add_executable(${PROJECT_NAME} ${creature_src})
