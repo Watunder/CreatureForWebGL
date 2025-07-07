@@ -12,7 +12,7 @@ import Creature from '../Creature.js';
  * Float64Array} typedArray 
  * @returns {Uint8Array}
  */
-Creature.heapBytes = (typedArray) => {
+export const heapBytes = (typedArray) => {
 	var numBytes = typedArray.length * typedArray.BYTES_PER_ELEMENT;
 	const memptr = Creature._malloc(numBytes);
 	const heapBytes = new Uint8Array(Creature.HEAPU8.buffer, memptr, numBytes);
@@ -20,6 +20,4 @@ Creature.heapBytes = (typedArray) => {
 	return heapBytes;
 }
 
-const PackManager = new Creature._PackManager();
-
-export { PackManager };
+export const packManager = new Creature.PackManager();

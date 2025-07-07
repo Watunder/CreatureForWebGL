@@ -11,9 +11,7 @@
  */
 
 /**
- * @typedef {{
- * heapBytes: (typedArray: TypedArray) => Uint8Array
- * } & import('../build_wasm/types.js').MainModule} CreatureModule
+ * @typedef {import('../build_wasm/types.js').MainModule} CreatureModule
  */
 
 /**

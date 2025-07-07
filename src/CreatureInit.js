@@ -1,6 +1,11 @@
+import { heapBytes, packManager } from './js/main.js';
+
 /**
  * @param {{}} [moduleArg] 
- * @returns {Promise<import('./Creature.js').CreatureModule>}
+ * @returns {Promise<{
+ * heapBytes: typeof heapBytes;
+ * packManager: typeof packManager;
+ * } & import('./Creature.js').CreatureModule>}
  */
 const CreatureInit = (moduleArg = {}) => { return; }
 export default CreatureInit;
